@@ -1,0 +1,39 @@
+#!/bin/bash
+#
+#   Filename: teleport
+#   Author: Lucy Profeta
+#   
+#   Usage:  ./teleport <user> <Machine Identifier>
+#      ex:     ./teleport root a
+#              ./teleport baxter A
+#   
+#   Teleport:
+#   Teleports administrator from one machine to another
+#   
+#   Comments:   The Network this script was made for had 5 machines.
+#               Each machine was Identified with a letter (A,B,C,D, or E)
+#               The original IP addresses and usernames have been omited
+#
+#               An executable copy of this script must be present on all machines that the
+#               admin wishes to teleport from.
+
+who=$1
+case $2 in
+    [Aa])
+        where=<IP_A>
+    ;;
+    [Bb])
+        where=<IP_B>
+    ;;
+    [Cc])
+        where=<IP_C>
+    ;;
+    [Dd])
+        where=<IP_D>
+    ;;
+    [Ee])
+        where=<IP_E>
+    ;;
+esac
+
+ssh $who@$where

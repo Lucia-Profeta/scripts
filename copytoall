@@ -1,0 +1,19 @@
+#!/bin/bash
+#
+#   Filename: copytoall
+#   Author: Lucy Profeta
+#   
+#   Usage: ./copytoall filetocopy.ext
+#   
+#   Copy To All:
+#   Copies specified file to all machines on the network.
+#   
+#   Comments:   The Network this script was made for had 5 machines.
+#               The original IP addresses and usernames have been omited
+#
+
+scp "$1" "<user>@<IP_A>"
+scp "$1" "<user>@<IP_B>"
+scp "$1" "<user>@<IP_C>"
+scp "$1" "<user>@<IP_D>"
+scp "$1" "<user>@<IP_E>"
